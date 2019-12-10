@@ -1,0 +1,17 @@
+header.main-header
+  .container
+    nav.navbar.navbar-expand-xl.p-0
+      a.navbar-brand(href='#')
+        picture
+          source(media='(max-width: 991px)' srcset='dist/images/footer-logo.png')
+          img(src='dist/images/logo.png' alt='logo')
+
+      button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        <i class="fas fa-bars"></i>
+      #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link.active(href='#') Home
+          each val, index in ['Why Us', 'Credit', 'Education','Pricing','FAQS','Affliates','Contact Us']  
+            li.nav-item
+              a.nav-link(href='#')= val  

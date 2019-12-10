@@ -1,0 +1,41 @@
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: em(20px) 0;
+  .navbar {
+    .nav-item {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .nav-link {
+      font-weight: 600;
+      color: #fff;
+      font-size: em(15px);
+      border-bottom: 1px solid transparent;
+      &.active,
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+
+// ===================== mobile
+.navbar-toggler {
+  border: 1px solid #fff;
+  color: #fff;
+}
+@include xl {
+  .navbar-collapse {
+    background: #1c70e5;
+    .navbar-nav {
+      padding: 15px;
+      @include lg {
+        padding: 0;
+      }
+    }
+  }
+}

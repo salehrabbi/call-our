@@ -1,0 +1,148 @@
+extends layouts/app.jade
+
+block title
+  title Home
+
+block main
+  section.banner
+    .container
+      .row.align-items-center
+        .col-lg-5
+          h1.color-east-bay Credit Freedom in 40 days or less
+          p.mb-3 Join Millions of People who are taking action to achieve Excellent Credit
+          a.btn.button(href="#") Start Boosting My Credit Now
+        .col-lg-7
+          .img.d-flex.align-items-center.justify-content-center
+            img(src="dist/images/banner.png" alt="")
+  section.quick-credit.space
+    .container
+      .item
+        .img.text-center.text-lg-left
+          img(src="dist/images/quick-credit.png" alt="")
+        .text.mt-4
+          h2.color-east-bay.mb-3 Quick Credit Boosters is a professional company  
+          p that specializes in legally rebuilding and restoring your personal credit. More simply, we help get you APPROVED without the guessing game. We utilize the most aggressive strategies in the industry to get you results in 40 days or less! Our proprietary “3 Round Takedown” removes negative items from ALL 3 Major Credit Bureaus.
+          p Our highly skilled Credit Consultants customize a plan tailored specifically to you and what you are trying to achieve. You do not have to live with bad credit or put your plans on hold. You can start moving forward TODAY!
+          a.btn.button.d-inline-block.mt-3(href="#") Learn More  
+  section.service.bg-athens-gray.space.bg-curve-before
+    .container
+      .section-heading.text-center.mx-auto(style="max-width: 613px")
+        h2.color-east-bay.mb-2 What Can Be Removed
+        p We are able to delete negative items from your credit report in as little as 14 days including
+      .items
+        each val, index in ['Bankruptcies', 'Tax Liens', 'Child Support','Repossessions','Evictions','Credit Card Debt','Student Loan Debt','Charge Offs','Collections','Medical Debt','Late Payments','Inquires & More']
+          a.item.d-flex.flex-wrap.text-decoration-none.justify-content-center(href="#")
+            .img.align-self-center.w-100
+              img(src="dist/images/ser-"+index+".png" alt="")
+            p.m-0.align-self-end.w-100= val
+  section.choose.space
+    .container
+      .d-lg-flex
+        .text
+          h2.color-east-bay.mb-5 Why People Choose Us
+          ul.p-0.m-0.list-unstyled
+            each val, index in ['Results in 40 days or Less','Our Aggressive Dispute Strategy','Our Top Secret 3 Round Takedown','Affordable Pricing & Payment Options','Expert Credit Consultants','Free Credit Analysis','#1 in Customer Support','Available 7 days a week']
+              li.mb-2.d-flex
+                <i class="fas fa-check mr-3"></i>
+                span= val
+        .img
+          img(src="dist/images/choose.png" alt="")   
+  section.testimonial.space.bg-athens-gray.bg-curve-before.pb-0
+    .container
+      .row
+        .col-12
+          .section-heading.text-center.mb-5
+            h2.color-east-bay Testimonials   
+      .row.mx-auto(style="max-width: 1009px")
+        - for(x=0; x<4; x++)
+          .col-lg-6.col-12
+            .item
+              .img
+                img(src="dist/images/ceo.png" alt="")
+              .text
+                a.title(href="#") Samanth Martin
+                span.small.d-block CEO
+                p Lorem ipsum dolor sit cosectetur adipiscing elit. Mauris facilisis ulamcorper pellentesque. Ex, vitae aliquam quam
+                a.btn.button.small(href="#") Read More
+      .row
+        .col-12.text-center.mt-5
+          a.btn.button(href="#") See More Testimonials  
+  section.question
+    .container
+      .text-center
+        h2.color-east-bay.mb-3.mx-auto(style="max-width:811px") Why Credit is Important and How Quick Credit Boosters can Help You             
+        p Majority of the financial system of America runs on credit. So, unless you have piles and piles of cash stored somewhere, you will need financing for most major purchases. Most people do not have the luxury of withdrawing large sums of money when it is time to purchase things like a vehicle or home and must rely on their credit. If you have no credit established or do not have a favorable credit score. You will either get denied, or worst end up paying up to 30 times the original price of the item you want. We eliminate this problem for you!
+  section.quick-credit
+    .container
+      .item.mt-5.pt-4
+        .img.text-center.text-lg-left
+          img(src="dist/images/question.png" alt="")
+        .text.mt-5
+          h3.color-east-bay.mb-3 Negative information generally stays on your credit report for
+          p at least seven years. What does that mean for you?  
+          p Anything "negative" on your credit profile doesn’t get removed from your credit score. So, every time you want to get a new place, credit card, home, vehicle, credit cards, or even start a business, your credit score is affected from the LAST SEVEN YEARS of payment history. Unless you have Quick Credit Boosters on your side!
+          p The reason a lot of companies struggle to fix credit is that they use the same old tactics that simply do not work anymore. It just becomes an endless cycle of little to no results. That is why we created our own system to boostyour credit, in the first 40 days, results guaranteed or your money back!
+  section.boost-plans.space.bg-curve-before
+    .container
+      .bost-items
+        .text
+          h3.color-east-bay.mb-3 Our secret "3 Round Takedown" is the key to boosting your score
+          p.font-weight-light Apply now or call our team and so you can start living the life you DESERVE!
+          ul.list-unstyled
+            each val, index in ['Drive that Dream Car You Deserve','Buy that Dream Home you Deserve','Start Getting Approved for Credit & Cash you Deserve']
+              li.mb-2.d-flex.font-size-normal.font-weight-medium
+                <i class="fas fa-check mr-3"></i>
+                span= val
+          p.font-weight-light It may be tempting to think that a low credit score only natters when you are trying to get approved for a car, home, or credit card, but that is just not the case these days. Your credit can affect your life in more ways than you can imagine. You deserve to have excellent credit, no matter your past or current situation. Stop procrastinating and change you life TODAY!
+          a.btn.button.d-inline-block.mt-4(href="#") Start Boosting My Credit Now
+        .images
+          .row-1
+            img.w-100.mb-4(src="dist/images/car-1.png" alt="")
+            img.w-100(src="dist/images/car-2.png" alt="")
+          .row-2.align-self-center
+            img.w-100(src="dist/images/car-3.png" alt="")  
+      h4.text-center.font-italic.mt-5.pt-4.pb-5.font-weight-normal Credit Repair a federally protect right. There are credit repair laws that guarantee consumers the right to correct errors in their credit report Credit Repair is legal in all 50 states. In ordinance with the Federal Credit Reporting Act, anything reporting on your credit must be 100% verifiable. We help you by challenging negative items on your credit report, to get them removed.
+      h2.color-east-bay.mb-3.text-center.mt-5.pt-4.mb-5 Our Affordable Pricing Plans
+      .plans.mx-auto(style="max-width: 781px")
+        a.item.text-center.d-block.text-decoration-none(href="#")
+          .p-4
+            h4.mb-3 Expedited Credit Repair
+            .price
+              span.top ONLY
+              span.big.color-dodger-blue.font-weight-normal $
+              span.big 797
+              span 1 Payments
+          ul.list-unstyled.p-4    
+            each val, index in ['Results in 40 days or less','Live Customer Support','Unlimited Disputes','Monthly Updates','Credit Education','No Long Term Contracts','Money Back Guaranteed if no deletions in 120 days']
+              li.mb-2
+                <i class="fas fa-check mr-2"></i>
+                span= val
+        a.item.text-center.d-block.text-decoration-none(href="#")
+          .p-4
+            h4.mb-3 Traditional Credit Repair
+            .price
+              span.top ONLY
+              span.big.color-dodger-blue.font-weight-normal $
+              span.big 330
+              span 3 Payments
+          ul.list-unstyled.p-4    
+            each val, index in ['Results in 90 days or less','Live Customer Support','Unlimited Disputes','Monthly Updates','Credit Education','No Long Term Contracts','Money Back Guaranteed if no deletions in 120 days']
+              li.mb-2
+                <i class="fas fa-check mr-2"></i>
+                span= val        
+      .text-center.pt-5
+        h4.font-weight-light.mb-3 Not Ready to Get Started Yet, Want to Speak with a Credit Consultant?  
+        a.btn.button(href="#") Book A Consultation
+  section.space.faq.bg-athens-gray.pb-0
+    .container
+      .section-heading.mb-5.text-center
+        h2.color-east-bay FAQS
+      #accordionExample.accordion.mx-auto(style="max-width: 976px;")
+        each val, index in ['Most members that select the expedited service option, see negative items removed from their report in 40 days or less.', 'On average the credit repair process takes 60-120 days', 'The End Result is the same for both processes. However, the amount of time it takes varies. The Traditional Credit Repair pricing model takes roughly 60-90 days longer than the Expedited Credit Repair Model. Of course, we recommend the Expedited Credit Repair to all of our clients because who does not want to see results fast? However, everyone deserves to have good credit. Hence why we make our services affordable for everyone and offer the flexible payment option as well.','That is a general statement. Most agencies and people who do not work in this profession are led to believe that items will remain on credit reports for up to 7 to 10 years. This is true if you do not challenge negative items on your report. We speed up the process and get your scores in good standingby using the Federal consumer protection laws. This is a 100% Legal means of credit repair.','Removing any accounts from your credit report does not remove your obligation to those debt. It stops the account from reporting to your credit report.Decisions to pay any debts that are removed from your report are solely up to your discretion.','It is very important that you build positive credit during the credit repair process and pay your current bills on time. If that is an issue, we can discuss alternative solutions that fits your specific needs. We also have Credit Building Packages available. Ask your Credit Consultant from more information.']
+          .card
+            .card-header(id="heading"+index)
+              h3.mb-0.position-relative.pr-3
+                button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse'+index aria-expanded='false' aria-controls='collapse'+index)
+                  | When will I see results?
+            .collapse(aria-labelledby='heading'+index data-parent='#accordionExample' id="collapse"+index)
+              .card-body= val

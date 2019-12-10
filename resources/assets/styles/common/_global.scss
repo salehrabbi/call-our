@@ -1,0 +1,147 @@
+* {
+  outline: 0 !important;
+}
+html {
+  @include md {
+    font-size: 90%;
+  }
+}
+body {
+  font-family: $f;
+  color: #272727;
+  background: #f2f2f2;
+}
+
+img {
+  max-width: 100%;
+}
+.color {
+  &-east-bay {
+    color: $east-bay;
+  }
+  &-dodger-blue {
+    color: $dodger-blue;
+  }
+}
+.bg {
+  &-amber {
+    background-color: $amber;
+  }
+  &-selago {
+    background-color: $selago;
+  }
+  &-athens-gray {
+    background-color: $athens-gray;
+  }
+}
+h1 {
+  font-size: em(52px);
+  font-weight: 900;
+  @include xl {
+    font-size: 2.6em;
+  }
+}
+h2 {
+  font-size: em(36px);
+  font-weight: 700;
+  @include sm {
+    font-size: 1.8em;
+  }
+}
+h3 {
+  font-size: em(30px);
+  font-weight: 700;
+  @include sm {
+    font-size: 1.5em;
+  }
+}
+h4 {
+  font-size: em(19px);
+}
+.font-size {
+  &-normal {
+    font-size: em(16px) !important;
+  }
+  &-big {
+    font-size: em(19px) !important;
+  }
+}
+.font-weight {
+  &-medium {
+    font-weight: 600 !important;
+  }
+}
+
+ul.list-unstyled {
+  li {
+    font-size: em(18px);
+    @include sm {
+      font-size: 14px;
+    }
+    i {
+      color: #3a93f8;
+      margin-top: 5px;
+    }
+  }
+}
+.space {
+  padding: em(90px) 0;
+  @include sm {
+    padding: em(60px) 0;
+  }
+}
+.button {
+  color: #ffffff;
+  font-size: em(19px);
+  font-weight: 600;
+  background: $amber;
+  border-radius: 26px;
+  padding: calc-em(9, 19) calc-em(35, 19);
+  transition: 0.3s;
+  &:hover {
+    background: $east-bay;
+    color: #fff;
+  }
+  &.small {
+    background-color: #3a93f8;
+    font-size: em(11px);
+    color: #ffffff;
+    padding: 0.3em 1.5em;
+    &:hover {
+      background: $amber;
+    }
+  }
+}
+
+.section-heading {
+  margin-bottom: em(90px);
+  p {
+    font-size: em(19px);
+    font-weight: 300;
+    line-height: (27/19);
+  }
+}
+
+.bg-curve-before {
+  position: relative;
+  &:before {
+    content: "";
+    background: url(../images/curve.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 204px;
+    z-index: -1;
+    @include sm {
+      background-size: cover;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}

@@ -1,0 +1,37 @@
+.main-footer {
+  background-image: url(../images/footer-bg.png);
+  background-size: 100% 100%;
+  // min-height: 427px;
+  padding-top: 15em;
+  @include sm {
+    background-size: cover;
+    padding-top: 11em;
+  }
+  .copy {
+    border-top: 2px solid #5286d3;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0;
+  }
+}
+.footer-menu {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-top: 36px;
+  margin-bottom: 20px;
+  li {
+    display: inline-block;
+    border-right: 2px solid #fff;
+    line-height: 1;
+    padding: 0 em(25px);
+    &:last-child {
+      border: none;
+    }
+  }
+  a {
+    font-size: em(19px);
+    color: #fff;
+    line-height: 1;
+  }
+}
