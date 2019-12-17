@@ -1,0 +1,60 @@
+extends layouts/app.jade
+
+block title
+  title Affilated
+
+block vars
+  - var bodyClass= 'affilated'
+
+block main
+  section.banner.bg-selago
+    .container
+      .row.align-items-center
+        .col-lg-5.text-center.text-lg-left
+          h1.color-east-bay Partner Program
+        .col-lg-7
+          .img.d-flex.align-items-center.justify-content-center.pl-lg-4
+            img(src="dist/images/patner-banner.png" alt="")
+  section.quick-credit.space
+    .container
+      .item
+        .img.text-center.text-lg-left
+          img(src="dist/images/tax.png" alt="")
+        .text.mt-4
+          h2.color-east-bay.mb-3 Are you a mortgage, real estate, tax professional, attorney, 
+          h4.color-east-bay.font-weight-bold auto dealer or a professional in any industry that is dependent upon clients with good credit?
+          p If the answer is yes, then partner with our company to make your clients are credit worthy. Refer your credit-challenged client to us, We will work to increase their credit score in record time and we always refer them back to you for your services. You can track your client's progress in our Client Login Portal.  When your client logs into our web portal, the first thing they will see is your photo and contact information as a reminder of their goal and the professional who refered them to us! Just fill out the form below.
+  section.service.bg-athens-gray.space.bg-curve-before
+    .container
+      .items.mx-auto(style="max-width: 697px")
+        ul.p-0.m-0.list-unstyled
+          each val, index in ['24 Hours Status Updates for our Clients and Partners from any computer or smart phone','Bilingual English and Spanish','Email notifications','Bank-level security','Credit Education','Marketing tools for our partners']
+            li.mb-2.d-flex
+              <i class="fas fa-check mr-3"></i>
+              span= val       
+  section.testimonial.space.pb-0
+    .container
+      .row
+        .col-12
+          .section-heading.text-center.mb-5
+            h2.color-east-bay These Partners Had Amazing Experiences   
+      .row.mx-auto.justify-content-center(style="max-width: 1009px")
+        - for(x=0; x<3; x++)
+          .col-lg-6.col-12
+            .item
+              .img
+                img(src="dist/images/ceo.png" alt="")
+              .text
+                a.title(href="#") Samanth Martin
+                span.small.d-block CEO
+                p Lorem ipsum dolor sit cosectetur adipiscing elit. Mauris facilisis ulamcorper pellentesque. Ex, vitae aliquam quam
+                a.btn.button.small(href="#") Read More
+  section.boost-plans.space.bg-curve-before.quick-credit
+    .container
+      .item(style="grid-column-gap: 30px;")
+        .img.text-center.text-lg-left
+          img(src="dist/images/find.png" alt="")
+        .text.mt-4.d-flex.flex-column.justify-content-center
+          h1.color-east-bay Find Out More Information about Becoming An Affiliate
+          .mt-4
+            a.btn.button(href="#") Get More Details
