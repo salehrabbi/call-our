@@ -22,6 +22,9 @@ img {
   &-dodger-blue {
     color: $dodger-blue;
   }
+  &-amber {
+    color: $amber;
+  }
 }
 .bg {
   &-amber {
@@ -69,6 +72,16 @@ h4 {
 .font-weight {
   &-medium {
     font-weight: 600 !important;
+  }
+}
+.text-decoration {
+  &-underline {
+    text-decoration: underline;
+  }
+}
+.vertical-align {
+  &-bottom {
+    vertical-align: bottom;
   }
 }
 
