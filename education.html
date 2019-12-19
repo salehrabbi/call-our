@@ -8,7 +8,7 @@
     <meta name="description" content="description here">
     <meta name="keywords" content="keywords,here">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
-    <title>Affilated</title>
+    <title>Education</title>
     <!-- Bootstrap-->
     <link href="dist/styles/style.css" rel="stylesheet">
     <!--if lt IE 9-->
@@ -68,7 +68,7 @@
           </div>
           <div class="score mt-5">
             <div class="grid">
-              <div class="person-a person text-right align-self-end color-east-bay">
+              <div class="person-a person text-sm-right text-center align-self-end color-east-bay">
                 <div class="title mb-4">Person A</div>
                 <ul class="p-0 m-0 list-unstyled">
                   <li>Credit Score: <b>730    </b></li>
@@ -79,7 +79,7 @@
                 </ul>
               </div>
               <div class="arrow text-center"><img src="dist/images/brand-arrow.png" alt=""></div>
-              <div class="person-b person align-self-end color-east-bay">
+              <div class="person-b person text-center text-sm-left align-self-end color-east-bay">
                 <div class="title mb-4">Person B</div>
                 <ul class="p-0 m-0 list-unstyled">
                   <li>Credit Score: <b>559</b></li>
@@ -100,8 +100,8 @@
         </div>
       </div>
     </section>
-    <section class="chart bg-athens-gray space clearfix">
-      <div class="container">
+    <section class="chart bg-athens-gray space clearfix bg-curve-before">
+      <div class="container overflow-hidden">
         <div class="row">
           <div class="col-12 mb-5">
             <h3 class="color-east-bay">What Is A Credit Score?</h3>
@@ -115,28 +115,79 @@
             <h3 class="color-east-bay">How Credit Bureaus Determine your Credit Score  </h3>
           </div>
         </div>
-        <div class="pieContainer clearfix">
-          <div class="pieBackground"></div>
-          <div class="hold" id="slice-1">
-            <div class="pie"></div>
+        <div class="chart-area">
+          <div class="pieContainer clearfix">
+            <div class="pieBackground"></div>
+            <div class="hold" id="slice-1">
+              <div class="pie"></div>
+            </div>
+            <div class="percent" id="slice-1-percent">15%  </div>
+            <div class="hold" id="slice-2">
+              <div class="pie"></div>
+            </div>
+            <div class="percent" id="slice-2-percent">10%    </div>
+            <div class="hold" id="slice-3">
+              <div class="pie"></div>
+            </div>
+            <div class="percent" id="slice-3-percent">10%   </div>
+            <div class="hold" id="slice-4">
+              <div class="pie"></div>
+            </div>
+            <div class="percent" id="slice-4-percent">35%   </div>
+            <div class="hold" id="slice-5">
+              <div class="pie"></div>
+            </div>
+            <div class="percent" id="slice-5-percent">30%   </div>
           </div>
-          <div class="hold" id="slice-2">
-            <div class="pie"></div>
-          </div>
-          <div class="hold" id="slice-3">
-            <div class="pie"></div>
-          </div>
-          <div class="hold" id="slice-4">
-            <div class="pie"></div>
-          </div>
-          <div class="hold" id="slice-5">
-            <div class="pie"></div>
+          <div class="content">
+            <ul class="p-0 m-0 list-unstyled">
+              <li id="slice-4-tigger">
+                <div class="text">
+                  <h4>Payment History - 35%</h4>
+                  <p>On-time payents vs. delinquencies, more weight on the last 24 month   </p>
+                </div>
+              </li>
+              <li id="slice-5-tigger">
+                <div class="text">
+                  <h4>Capacity and Amount Owed - 30%</h4>
+                  <p>Perecentage of credit limits available</p>
+                </div>
+              </li>
+              <li id="slice-1-tigger">
+                <div class="text">
+                  <h4>Length of Credit - 15%</h4>
+                  <p>How long you’ve had your accounts</p>
+                </div>
+              </li>
+              <li id="slice-2-tigger">
+                <div class="text">
+                  <h4>New Credit - 10%</h4>
+                  <p>Number of inquiries and new accounts opened in the last 12 - 18 months    </p>
+                </div>
+              </li>
+              <li id="slice-3-tigger">
+                <div class="text">
+                  <h4>Types of Credit Used - 10%</h4>
+                  <p>Installment loans vs. revolving  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-        <p> hello    </p>
+        <p class="font-weight-light m-0">The percentages in this chart show how important each of the categories is in determining your credit score. We will help you to remove negative items your payment history. We will also show you how to maximize your debt ratio score, even if paying off credit cards is not a option.          </p>
+        <h3 class="color-east-bay mt-5 mb-5">How Your Behavior Is Evaluated In Your Credit Report:</h3>
+        <h4 class="color-east-bay">Do you pay your bills on time? </h4>
+        <p class="font-weight-light mb-4">Payment history is a major factor in credit scoring. If you have paid bills late,have collections or a bankruptcy, these events won’t reflect well in your credit score.</p>
+        <h4 class="color-east-bay">Do you have a long credit history?</h4>
+        <p class="font-weight-light mb-4">Generally speaking, the longer your history of holding accounts is, the more trusted you will be as a borrower.</p>
+        <h4 class="color-east-bay">Have you applied for credit recently? </h4>
+        <p class="font-weight-light mb-4">If you have many recent inquiries this can be construed as being negative by the bureaus. Only apply for credit when you really want it.</p>
+        <h4 class="color-east-bay">What is your outstanding debt?</h4>
+        <p class="font-weight-light">It is important to not use all of your available credit. If all of your credit cards are maxed out, your scores will reflect that you are not managing your debt wisely.</p>
+        <div class="mt-5 text-center"><a class="btn button" href="#">Get Your Free Credit Analysis Now</a></div>
       </div>
     </section>
-    <section class="range space">
+    <section class="range space pb-0">
       <div class="container">
         <div class="text-center mb-4"><img src="dist/images/clock.png" alt=""></div>
         <div class="section-heading text-center">

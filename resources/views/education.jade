@@ -1,7 +1,7 @@
 extends layouts/app.jade
 
 block title
-  title Affilated
+  title Education
 
 block vars
   - var bodyClass= 'affilated'
@@ -32,7 +32,7 @@ block main
             span.color-east-bay 66 Month Term
         .score.mt-5
           .grid
-            .person-a.person.text-right.align-self-end.color-east-bay
+            .person-a.person.text-sm-right.text-center.align-self-end.color-east-bay
               .title.mb-4 Person A
               ul.p-0.m-0.list-unstyled
                 li Credit Score: 
@@ -47,7 +47,7 @@ block main
                   b $24,302.39  
             .arrow.text-center
               img(src="dist/images/brand-arrow.png" alt="")      
-            .person-b.person.align-self-end.color-east-bay
+            .person-b.person.text-center.text-sm-left.align-self-end.color-east-bay
               .title.mb-4 Person B
               ul.p-0.m-0.list-unstyled
                 li Credit Score: 
@@ -68,8 +68,8 @@ block main
             p.big.font-weight-medium.mb-0 Than person A for the exact same car and price!
             p.font-weight-light.mb-0 his same thing happens with your credit cards, mortgage, loans, etc, Cleaning up your credit will lower your bills and can 
               span.text-decoration-underline save hundreds of thousands of dollars!   
-  section.chart.bg-athens-gray.space.clearfix
-    .container
+  section.chart.bg-athens-gray.space.clearfix.bg-curve-before
+    .container.overflow-hidden
       .row
         .col-12.mb-5
           h3.color-east-bay What Is A Credit Score?
@@ -79,21 +79,59 @@ block main
           p.font-weight-light.m-0 A credit bureau is a company that collects and maintains your credit information and sells it to lenders, creditors, and consumers in the form of a credit report. There are dozens of credit bureaus. We’re most concerned with the big three: Equifax, Experian, and TransUnion.
         .col-12
           h3.color-east-bay How Credit Bureaus Determine your Credit Score  
-      .pieContainer.clearfix
-        .pieBackground
-        #slice-1.hold
-          .pie
-        #slice-2.hold
-          .pie
-        #slice-3.hold
-          .pie
-        #slice-4.hold
-          .pie
-        #slice-5.hold
-          .pie
-      p  hello    
-
-  section.range.space
+      .chart-area
+        .pieContainer.clearfix
+          .pieBackground
+          #slice-1.hold
+            .pie
+          #slice-1-percent.percent 15%  
+          #slice-2.hold
+            .pie
+          #slice-2-percent.percent 10%    
+          #slice-3.hold
+            .pie
+          #slice-3-percent.percent 10%   
+          #slice-4.hold
+            .pie
+          #slice-4-percent.percent 35%   
+          #slice-5.hold
+            .pie
+          #slice-5-percent.percent 30%   
+        .content
+          ul.p-0.m-0.list-unstyled
+            li#slice-4-tigger
+              .text
+                h4 Payment History - 35%
+                p On-time payents vs. delinquencies, more weight on the last 24 month   
+            li#slice-5-tigger
+              .text
+                h4 Capacity and Amount Owed - 30%
+                p Perecentage of credit limits available
+            li#slice-1-tigger
+              .text
+                h4 Length of Credit - 15%
+                p How long you’ve had your accounts
+            li#slice-2-tigger
+              .text
+                h4 New Credit - 10%
+                p Number of inquiries and new accounts opened in the last 12 - 18 months    
+            li#slice-3-tigger
+              .text
+                h4 Types of Credit Used - 10%
+                p Installment loans vs. revolving  
+      p.font-weight-light.m-0 The percentages in this chart show how important each of the categories is in determining your credit score. We will help you to remove negative items your payment history. We will also show you how to maximize your debt ratio score, even if paying off credit cards is not a option.          
+      h3.color-east-bay.mt-5.mb-5 How Your Behavior Is Evaluated In Your Credit Report:
+      h4.color-east-bay Do you pay your bills on time? 
+      p.font-weight-light.mb-4 Payment history is a major factor in credit scoring. If you have paid bills late,have collections or a bankruptcy, these events won’t reflect well in your credit score.
+      h4.color-east-bay Do you have a long credit history?
+      p.font-weight-light.mb-4 Generally speaking, the longer your history of holding accounts is, the more trusted you will be as a borrower.
+      h4.color-east-bay Have you applied for credit recently? 
+      p.font-weight-light.mb-4 If you have many recent inquiries this can be construed as being negative by the bureaus. Only apply for credit when you really want it.
+      h4.color-east-bay What is your outstanding debt?
+      p.font-weight-light It is important to not use all of your available credit. If all of your credit cards are maxed out, your scores will reflect that you are not managing your debt wisely.
+      .mt-5.text-center
+        a.btn.button(href="#") Get Your Free Credit Analysis Now
+  section.range.space.pb-0
     .container
       .text-center.mb-4
         img(src="dist/images/clock.png" alt="")        

@@ -314,6 +314,7 @@
 }
 // ===================== brand
 .brand {
+  padding-bottom: 11em;
   .brand-items {
     .heading {
       h2 {
@@ -330,9 +331,16 @@
         font-weight: 300;
         vertical-align: middle;
         margin-left: 10px;
+        @include sm {
+          display: block;
+          margin: 0;
+        }
       }
       &.big {
         font-size: em(77px);
+        @include sm {
+          font-size: 3.813em;
+        }
         span {
           font-size: calc-em(20, 77);
           vertical-align: baseline;
@@ -343,14 +351,34 @@
       .grid {
         display: grid;
         grid-template-columns: 1fr 1.5fr 1fr;
+        @include lg {
+          grid-template-columns: 1fr 1fr;
+          grid-gap: 30px 40px;
+          .arrow {
+            order: 1;
+            grid-column: 1/-1;
+          }
+          .person-a {
+            order: 2;
+          }
+          .person-b {
+            order: 3;
+          }
+        }
+        @include sm {
+          grid-template-columns: 1fr;
+        }
       }
       .title {
         font-size: em(35px);
         font-weight: 700;
       }
       .person {
+        @include md {
+          font-size: 12px;
+        }
         li {
-          font-size: 22px;
+          font-size: em(22px);
           font-weight: 300;
           b {
             font-weight: 600;
@@ -362,8 +390,14 @@
       p {
         font-size: em(20px);
         line-height: (40/20);
+        @include md {
+          font-size: 16px;
+        }
         &.big {
           font-size: em(25px);
+          @include md {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -415,6 +449,73 @@
   }
 }
 // ===================== chart
+.chart {
+  h4 {
+    font-size: em(20);
+    font-weight: 600;
+  }
+  p {
+    font-size: em(18);
+  }
+  &.bg-curve-before {
+    background-color: #f9f9fe;
+    &:before {
+      background-image: url(../images/chart-before.png);
+      height: 256px;
+    }
+  }
+}
+.chart-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: em(70px) 0;
+  @include lg {
+    grid-template-columns: 1fr;
+    grid-row-gap: 90px;
+    margin: em(50px) 0;
+  }
+  .content {
+    li {
+      display: grid;
+      grid-template-columns: em(24px) 1fr;
+      grid-column-gap: em(24px);
+      margin-bottom: em(10px);
+      &:before {
+        content: "";
+        width: em(24px);
+        height: em(24px);
+        background-color: #99ca2d;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+    #slice-4-tigger {
+      &:before {
+        background-color: #99ca2d;
+      }
+    }
+    #slice-5-tigger {
+      &:before {
+        background-color: #30b6e8;
+      }
+    }
+    #slice-1-tigger {
+      &:before {
+        background-color: #ef4649;
+      }
+    }
+    #slice-2-tigger {
+      &:before {
+        background-color: #f5890b;
+      }
+    }
+    #slice-3-tigger {
+      &:before {
+        background-color: #fdb923;
+      }
+    }
+  }
+}
 :root {
   --chart-width: 381px;
   --chart-height: 380px;
@@ -423,17 +524,23 @@
   --slice-3: calc(10deg * 3.6);
   --slice-4: calc(35deg * 3.6);
   --slice-5: calc(30deg * 3.6);
+  @include md {
+    --chart-width: 300px;
+    --chart-height: 300px;
+  }
 }
 .pieContainer {
   width: var(--chart-width);
   height: var(--chart-height);
-  margin: 50px 0;
+  // margin: 50px 0;
   transform: rotate(-10deg);
   position: relative;
+  align-self: center;
+  margin: 0 auto;
 }
 .pieBackground {
-  width: 154px;
-  height: 154px;
+  width: em(154px);
+  height: em(154px);
   box-shadow: 0 21px 39px rgba(0, 0, 0, 0.32);
   background-color: #ffffff;
   background-image: linear-gradient(
@@ -449,7 +556,10 @@
   right: 0;
   margin: 0 auto;
   top: 50%;
-  margin-top: (-154px / 2);
+  margin-top: em(-77px);
+  @include md {
+    font-size: 10px;
+  }
 }
 .pie {
   position: absolute;
@@ -463,7 +573,10 @@
   width: var(--chart-width);
   height: var(--chart-height);
   border-radius: 50%;
-  filter: drop-shadow(-1px 7px 3px rgba(0, 0, 0, 0.16));
+  transition: 0.3s;
+  &.hover {
+    filter: drop-shadow(-1px 7px 3px rgba(0, 0, 0, 0.16));
+  }
   clip: rect(
     0px,
     var(--chart-width),
@@ -471,10 +584,47 @@
     calc(var(--chart-width) / 2)
   );
 }
-
+.percent {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: em(48px);
+  z-index: 10;
+  position: absolute;
+  @include md {
+    font-size: 2.5em;
+  }
+}
+#slice-1-percent {
+  top: 9%;
+  left: 56%;
+  transform: rotate(10deg);
+}
+#slice-2-percent {
+  top: 30%;
+  left: 73%;
+  transform: rotate(-10deg);
+}
+#slice-3-percent {
+  top: 51%;
+  left: 73%;
+  transform: rotate(14deg);
+}
+#slice-4-percent {
+  top: 73%;
+  left: 32%;
+  transform: rotate(13deg);
+}
+#slice-5-percent {
+  top: 21%;
+  left: 11%;
+  transform: rotate(-60deg);
+}
 #slice-1 {
-  transform: scale(1.17);
-  z-index: 3;
+  &.hover {
+    transform: scale(1.17);
+    z-index: 3;
+  }
+
   .pie {
     background-color: #1b458b;
     transform: rotate(var(--slice-1));
@@ -482,8 +632,11 @@
   }
 }
 #slice-2 {
-  transform: rotate(var(--slice-1)) scale(1.1);
-  z-index: 2;
+  transform: rotate(var(--slice-1));
+  &.hover {
+    z-index: 2;
+    transform: rotate(var(--slice-1)) scale(1.1);
+  }
   .pie {
     transform: rotate(var(--slice-2));
     background-color: #1b458b;
@@ -492,7 +645,10 @@
 }
 #slice-3 {
   transform: rotate(calc(var(--slice-1) + var(--slice-2)));
-  z-index: 1;
+  &.hover {
+    z-index: 1;
+    transform: rotate(calc(var(--slice-1) + var(--slice-2))) scale(1.1);
+  }
   .pie {
     background-color: #cc0000;
     transform: rotate(var(--slice-3));
@@ -501,9 +657,12 @@
 }
 
 #slice-4 {
-  transform: rotate(calc(var(--slice-1) + var(--slice-2) + var(--slice-3)))
-    scale(1.3);
-  z-index: 5;
+  transform: rotate(calc(var(--slice-1) + var(--slice-2) + var(--slice-3)));
+  &.hover {
+    z-index: 5;
+    transform: rotate(calc(var(--slice-1) + var(--slice-2) + var(--slice-3)))
+      scale(1.3);
+  }
   .pie {
     transform: rotate(var(--slice-4));
     background-color: green;
@@ -513,10 +672,15 @@
 
 #slice-5 {
   transform: rotate(
-      calc(var(--slice-1) + var(--slice-2) + var(--slice-3) + var(--slice-4))
-    )
-    scale(1.23);
-  z-index: 4;
+    calc(var(--slice-1) + var(--slice-2) + var(--slice-3) + var(--slice-4))
+  );
+  &.hover {
+    z-index: 4;
+    transform: rotate(
+        calc(var(--slice-1) + var(--slice-2) + var(--slice-3) + var(--slice-4))
+      )
+      scale(1.23);
+  }
   .pie {
     transform: rotate(var(--slice-5));
     background-color: yellow;
