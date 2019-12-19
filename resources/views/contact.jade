@@ -1,0 +1,87 @@
+extends layouts/app.jade
+
+block title
+  title Education
+
+block vars
+  - var bodyClass= 'affilated contact-page'
+
+block main
+  section.banner.bg-selago
+    .container
+      .row.align-items-center
+        .col-lg-5.text-center.text-lg-left
+          h1.color-east-bay Contact Us
+        .col-lg-7
+          .img.d-flex.align-items-center.justify-content-center.pl-lg-4
+            img(src="dist/images/contact-banner.png" alt="")
+  section.contact.space
+    .container
+      .section-heading.text-center
+        h2.color-east-bay Contact Us 
+        p Questions? Concerns? General Inquiries? We would love to hear from you! You can reach out to us by filling the form below or sending us mail. One of our support representatives will be there to assist you shortly.     
+      .contact-form
+        .img.align-self-end.text-center
+          img(src="dist/images/contact-form.png" alt="")
+        form(action="#")
+          .row
+            .col-12
+              .title Write Us
+              each val, index in ['Name', 'E-mail', 'Phone Number']
+                .col-12.p-0
+                  label.w-100(for="input"+index)= val 
+                    span *
+                    input.w-100(type="text" id="input"+index)    
+              .col-12.p-0
+                label.w-100(for="input4") Message
+                  textarea.w-100(id="input4")  
+              .col-12.p-0
+                button.w-100.border-0.btn.button.py-0(type="submit") Submit 
+  section.space.faq.bg-athens-gray.pb-0
+    .container
+      .section-heading.mb-5.text-center
+        h2.color-east-bay FAQS
+      #accordionExample.accordion.mx-auto(style='max-width: 976px;')
+        .card
+          #heading0.card-header
+            h3.mb-0.position-relative.pr-3
+              button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse0' aria-expanded='false' aria-controls='collapse0') When will I see results?
+          #collapse0.collapse(aria-labelledby='heading0' data-parent='#accordionExample')
+            .card-body
+              | Most members that select the expedited service option, see negative items removed from their report in 40 days or less.
+        .card
+          #heading1.card-header
+            h3.mb-0.position-relative.pr-3
+              button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse1' aria-expanded='false' aria-controls='collapse1') How long does credit repair take?
+          #collapse1.collapse(aria-labelledby='heading1' data-parent='#accordionExample')
+            .card-body On average the credit repair process takes 60-120 days
+        .card
+          #heading2.card-header
+            h3.mb-0.position-relative.pr-3
+              button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse2' aria-expanded='false' aria-controls='collapse2')
+                | What is the difference between the Expedited Credit Repair Program & the
+                | Traditional Credit Repair Program?
+          #collapse2.collapse(aria-labelledby='heading2' data-parent='#accordionExample')
+            .card-body
+              | The End Result is the same for both processes. However, the amount of time it takes varies. The Traditional Credit Repair pricing model takes roughly 60-90 days longer than the Expedited Credit Repair Model. Of course, we recommend the Expedited Credit Repair to all of our clients because who does not want to see results fast? However, everyone deserves to have good credit. Hence why we make our services affordable for everyone and offer the flexible payment option as well.
+        .card
+          #heading3.card-header
+            h3.mb-0.position-relative.pr-3
+              button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse3' aria-expanded='false' aria-controls='collapse3') Don’t items take 7-10 years to be removed from my credit report?
+          #collapse3.collapse(aria-labelledby='heading3' data-parent='#accordionExample')
+            .card-body
+              | That is a general statement. Most agencies and people who do not work in this profession are led to believe that items will remain on credit reports for up to 7 to 10 years. This is true if you do not challenge negative items on your report. We speed up the process and get your scores in good standingby using the Federal consumer protection laws. This is a 100% Legal means of credit repair.
+        .card
+          #heading4.card-header
+            h3.mb-0.position-relative.pr-3
+              button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse4' aria-expanded='false' aria-controls='collapse4') What happens to the account when they are removed from my credit report?
+          #collapse4.collapse(aria-labelledby='heading4' data-parent='#accordionExample')
+            .card-body
+              | Removing any accounts from your credit report does not remove your obligation to those debt. It stops the account from reporting to your credit report.Decisions to pay any debts that are removed from your report are solely up to your discretion.
+        .card
+          #heading5.card-header
+            h3.mb-0.position-relative.pr-3
+              button.btn.text-left(type='button' data-toggle='collapse' data-target='#collapse5' aria-expanded='false' aria-controls='collapse5') How Can I Help my score?
+          #collapse5.collapse(aria-labelledby='heading5' data-parent='#accordionExample')
+            .card-body
+              | It is very important that you build positive credit during the credit repair process and pay your current bills on time. If that is an issue, we can discuss alternative solutions that fits your specific needs. We also have Credit Building Packages available. Ask your Credit Consultant from more information.

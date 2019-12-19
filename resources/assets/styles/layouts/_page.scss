@@ -687,3 +687,71 @@
     background-color: #30b6e8;
   }
 }
+// =============================== .contact
+.contact {
+  .contact-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+    @include lg {
+      grid-template-columns: 1fr;
+    }
+    form {
+      background-color: #ffffff;
+      box-shadow: 0 0 87px rgba(0, 0, 0, 0.17);
+      padding: em(47px) em(87px);
+      @include xl {
+        padding: em(30px) em(60px);
+      }
+      @include sm {
+        padding: em(20px);
+      }
+      .title {
+        font-size: em(40px);
+        font-weight: 700;
+        color: #373838;
+        margin-bottom: calc-em(20, 44);
+        &:after {
+          content: "";
+          height: 5px;
+          width: 65px;
+          background-color: #25aae0;
+          display: block;
+          border-radius: 50px;
+        }
+      }
+      label {
+        font-weight: 300;
+        letter-spacing: em(0.32px);
+        color: #373838;
+        margin: 0;
+        span {
+          color: #25aae0;
+          margin-left: 4px;
+        }
+      }
+      input {
+        border: 1px solid rgba(234, 234, 231, 0.5);
+        height: em(43px);
+        padding: 0 em(15px);
+        margin-top: 5px;
+        margin-bottom: 10px;
+      }
+      textarea {
+        height: em(114px);
+        border: 1px solid rgba(234, 234, 231, 0.5);
+        padding: em(15px);
+        margin-top: 5px;
+        margin-bottom: em(28px);
+      }
+      button {
+        height: calc-em(54, 25);
+        color: #ffffff;
+        font-size: em(25px);
+        font-weight: 700;
+        text-transform: uppercase;
+        border-radius: 50px;
+      }
+    }
+  }
+}
